@@ -1,4 +1,14 @@
 
+//function to set name 
+var getPlayerName = function() {
+  var name = ""; 
+  console.log("Your robot's name is " + name);
+  return name; 
+}
+while (name === "" || name === null) {
+  name = prompt("What is your robot's name?");
+};
+
 // function to start a new game
 var startGame = function() {
 
@@ -160,7 +170,7 @@ var randomNumber = function(min, max) {
 };
 
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100, 
   attack: 10, 
   money: 10,
@@ -191,7 +201,7 @@ var playerInfo = {
     else {
       window.alert("You don't have enough money!");
     }
-  }
+  },
 
   refillMoney: function () {
     this.attack += 6; 
